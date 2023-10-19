@@ -31,6 +31,10 @@ async function run() {
       res.send(result);
     });
 
+    app.get('foods', async(res, req) => {
+        
+    })
+
     app.get("/foods/:id", async (req, res) => {
       const id = req.params.id;
       const query = { _id: new ObjectId(id) };
@@ -94,6 +98,8 @@ run().catch(console.dir);
 app.get("/", (req, res) => {
   res.send("Crud is running...");
 });
+
+
 
 app.listen(port, () => {
   console.log(`Simple Crud is Running on port ${port}`);
