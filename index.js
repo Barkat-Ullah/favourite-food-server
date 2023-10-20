@@ -30,10 +30,15 @@ async function run() {
       const result = await foodCollection.find().toArray();
       res.send(result);
     });
+    
+// supplier_brand
 
-    app.get('foods', async(res, req) => {
-        
-    })
+    // app.get("/foods/:supplier_brand", async (req, res) => {
+    //     const id = req.params.supplier_brand;
+    //     const query = { supplier: new ObjectId(id) };
+    //     const result = await foodCollection.findOne(query);
+    //     res.send(result);
+    //   });
 
     app.get("/foods/:id", async (req, res) => {
       const id = req.params.id;
